@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnostic Comptable IA</title>
+</head>
+<body>
+    <h1>Diagnostic Comptable IA</h1>
+    <form action="/diagnose" method="post" enctype="multipart/form-data">
+        <label for="content">Entrez le texte à analyser :</label><br>
+        <textarea id="content" name="content" rows="10" cols="50"></textarea><br><br>
+        <label for="file">Ou téléchargez un fichier :</label><br>
+        <input type="file" id="file" name="file"><br><br>
+        <label for="analysis_type">Type d'analyse :</label><br>
+        <select id="analysis_type" name="analysis_type">
+            <option value="entries">Entrées Comptables</option>
+            <option value="statement">État Financier</option>
+        </select><br><br>
+        <input type="submit" value="Diagnostiquer">
+    </form>
+</body>
+</html>
