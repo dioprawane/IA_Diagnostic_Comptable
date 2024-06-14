@@ -1,0 +1,28 @@
+{
+    "actif": {
+        "actif_immobilise": {
+            "immobilisations_incorporelles": 50000,
+            "immobilisations_corporelles": 200000,
+            "immobilisations_financieres": 30000
+        },
+        "actif_circulant": {
+            "stocks": 40000,
+            "creances_clients": 60000,
+            "autres_creances": 15000,
+            "valeurs_mobilieres_de_placement": 10000,
+            "disponibilites": 50000
+        }
+    },
+    "passif": {
+        "capitaux_propres": {
+            "capital_social": 100000,
+            "reserves": 30000,
+            "resultat_net": 20000
+        },
+        "dettes": {
+            "dettes_financieres": 80000,
+            "dettes_fournisseurs": 25000,
+            "autres_dettes": 10000
+        }
+    }
+}

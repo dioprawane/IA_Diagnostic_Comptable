@@ -1,0 +1,12 @@
+date,montant,libellé,compte_debit,compte_credit
+2023-01-01,1000.00,Achat de marchandises,607,401
+2023-01-02,1500.00,Vente de marchandises,411,707
+2023-01-03,1000.00,Paiement facture fournisseur,401,512
+2023-01-04,1500.00,Encaissement facture client,512,Ok
+2023-01-05,5000.00,Salaires bruts,641,421
+10000,2000.00,Charges sociales,645,431
+2023-01-06,500.00,Amortissement des immobilisations,681,281
+2023-01-07,200.00,Frais généraux,606,401
+2023-01-08,10000.00,Emprunt bancaire,512,164
+2023-01-09,1100.00,Remboursement emprunt bancaire,164,512
+2023-01-10,300.00,Provision pour créances douteuses,681,491

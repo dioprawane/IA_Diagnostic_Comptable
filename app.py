@@ -19,7 +19,7 @@ client = openai.Client()
 print("Client", client)
 print("Clef", openai.api_key)
 
-ALLOWED_EXTENSIONS = {'csv', 'xlsx', 'json'}
+ALLOWED_EXTENSIONS = {'csv', 'json'}
 
 fine_tuned_model_id = "ft:gpt-3.5-turbo-0125:universit-cote-d-azur:financial-balance:9a4MVECl"  # ID du modèle fine-tuné
 

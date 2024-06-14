@@ -1,0 +1,25 @@
+{
+    "revenus": {
+        "ventes": 500000,
+        "prestations_de_services": 150000,
+        "autres_revenus": 20000
+    },
+    "charges": {
+        "achats_marchandises": 200000,
+        "services_extérieurs": 50000,
+        "impôts_taxes": 10000,
+        "charges_de_personnel": 150000,
+        "dotations_aux_amortissements": 30000,
+        "autres_charges": 5000
+    },
+    "resultat_financier": {
+        "produits_financiers": 10000,
+        "charges_financières": 5000
+    },
+    "resultat_exceptionnel": {
+        "produits_exceptionnels": 5000,
+        "charges_exceptionnelles": 2000
+    },
+    "impôts_sur_les_bénéfices": 25000,
+    "resultat_net": 100000
+}
