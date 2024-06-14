@@ -23,6 +23,7 @@ ALLOWED_EXTENSIONS = {'csv', 'xlsx', 'json'}
 
 fine_tuned_model_id = "ft:gpt-3.5-turbo-0125:universit-cote-d-azur:financial-balance:9a4MVECl"  # ID du modèle fine-tuné
 
+# Liste des contenus de questions valides pour l'analyse de l'équilibre financier
 valid_questions = [
     "Définition du bilan financier :",
     "Approche patrimoniale du bilan :",
@@ -94,9 +95,11 @@ valid_questions = [
     "Comment analyser les flux de trésorerie ?"
 ]
 
+# Fonction pour vérifier si le fichier est autorisé
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+# Fonction pour lire le contenu du fichier
 def read_file(file):
     if file.filename.endswith('.csv'):
         return pd.read_csv(file).to_string(index=False)
@@ -107,17 +110,18 @@ def read_file(file):
     else:
         return None
 
+# Fonction (modèle) pour analyser le texte des écritures comptables
 def analyze_text(text):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "Vous êtes un expert en détection d'anomalies comptables."},
-            {"role": "user", "content": f"Analysez les écritures comptables suivantes et détectez les anomalies comme des champs de montant incorrects, des descriptions non valides, ou des comptes incorrects.\n\n{text}\n\nFournissez un résumé clair des anomalies détectées."}
+            {"role": "system", "content": "Vous êtes un expert en détection d'anomalies comptables. Vous savez et devez analyser lcorrectement es écritures comptables surtout le type des données."},
+            {"role": "user", "content": f"Analysez les écritures comptables suivantes et détectez les anomalies comme des champs de montant incorrects, des champs avec des types de données ou format différents, des descriptions non valides, ou des comptes incorrects.\n\n{text}\n\nFournissez un résumé clair des anomalies détectées."}
         ]
     )
-    #return response['choices'][0]['message']['content'].strip()
     return response.choices[0].message.content.strip()
 
+# Fonction (modèle) pour analyser l'état financier
 def analyze_financial_statement(statement):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
@@ -126,17 +130,17 @@ def analyze_financial_statement(statement):
             {"role": "user", "content": f"Analysez l'état financier suivant et fournissez une analyse :\n\n{statement}"}
         ],
     )
-    #return response['choices'][0]['message']['content'].strip()
     return response.choices[0].message.content.strip()
 
+# Fonction pour vérifier si la question est valide
 def is_valid_question(question):
-    threshold = 0.7  # Ajustez ce seuil selon le besoin
-    # Convertir la question et les questions valides en minuscules
+    threshold = 0.7 
     question_lower = question.lower()
     valid_questions_lower = [q.lower() for q in valid_questions]
     closest_matches = difflib.get_close_matches(question_lower, valid_questions_lower, n=1, cutoff=threshold)
     return len(closest_matches) > 0
 
+# Fonction (modèle) pour analyser l'équilibre financier avec un modèle fine-tuné créé à partir du fichier fine_tuning.py
 def financial_balance_analysis(question):
     if not is_valid_question(question):
         return "La question n'est pas valide."
@@ -150,21 +154,19 @@ def financial_balance_analysis(question):
                 {"role": "system", "content": "Tu es un expert en équilibre financier."},
                 {"role": "user", "content": question}
             ],
-            #max_tokens=150
         )
-        #return response['choices'][0]['message']['content'].strip()
         return response.choices[0].message.content.strip()
     except openai.error.InvalidRequestError as e:
         print(f"Error: {e}")
         return "Le modèle fine-tuné spécifié n'existe pas ou vous n'y avez pas accès."
 
-
+# Route pour la page d'accueil de l'application Flask
 @app.route('/')
 def index():
-    #return render_template('index.html')
     #return redirect("http://127.0.0.1:5500/miage_front_ia/index.html")
     return "Flask Server is running"
 
+# Route pour les requêtes POST des différents modèles
 @app.route('/diagnose', methods=['POST'])
 def diagnose():
     content = request.form.get('content')
@@ -194,8 +196,8 @@ def diagnose():
     else:
         result = "Aucun contenu ou fichier valide fourni pour l'analyse."
     
-    #return render_template('result.html', content=content or filename, result=result)
     return jsonify({'content': content or filename, 'result': result})
 
+# main driver function
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
