@@ -84,6 +84,10 @@ Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce proje
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
+## Références
+- https://platform.openai.com/docs/guides/fine-tuning/create-a-fine-tuned-model
+- https://cookbook.openai.com/examples/how_to_finetune_chat_models#check-job-status
+
 ## Auteurs
 
 - **Diop Rawane** - *Développeur principal* - [dioprawane](https://github.com/dioprawane)
