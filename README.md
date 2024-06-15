@@ -7,6 +7,7 @@ Ce projet est une application web de diagnostic comptable utilisant l'API OpenAI
 - Analyse des écritures comptables pour détecter les anomalies.
 - Analyse des états financiers pour fournir une analyse détaillée.
 - Support de l'entrée des données via texte ou téléchargement de fichier (CSV, Excel, JSON).
+- Expertise comptable sur des questions précises.
 
 ## Prérequis
 
@@ -62,23 +63,7 @@ Ce projet est une application web de diagnostic comptable utilisant l'API OpenAI
 ## Structure du Projet
 
 - `app.py` : Le fichier principal de l'application Flask.
-- `templates/` : Contient les fichiers HTML pour l'interface utilisateur.
-  - `index.html` : Page principale pour entrer les données.
-  - `result.html` : Page pour afficher les résultats de l'analyse.
-- `static/` : Contient les fichiers statiques (CSS, JavaScript).
-  - `style.css` : Fichier de style pour l'interface utilisateur.
-- `.env` : Fichier pour stocker les variables d'environnement (clé API OpenAI).
 - `requirements.txt` : Liste des dépendances Python nécessaires.
-
-## Contribution
-
-Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez suivre ces étapes :
-
-1. Fork le repository
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/new-feature`)
-3. Commitez vos modifications (`git commit -m 'Ajouter une nouvelle fonctionnalité'`)
-4. Poussez votre branche (`git push origin feature/new-feature`)
-5. Ouvrez une Pull Request
 
 ## Licence
 
@@ -87,6 +72,8 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ## Références
 - https://platform.openai.com/docs/guides/fine-tuning/create-a-fine-tuned-model
 - https://cookbook.openai.com/examples/how_to_finetune_chat_models#check-job-status
+- https://cookbook.openai.com/
+
 
 ## Auteurs
 
