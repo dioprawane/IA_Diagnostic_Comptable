@@ -89,7 +89,7 @@ performances et la précision du modèle final.
 2. Couverture étendue des concepts financiers
 
 Le modèle fine-tuné est conçu pour comprendre et fournir des explications détaillées sur un
-large éventail de sujets liés aux bilans financiers qui se trouvent sur « questions_valides.md » , tels que :
+large éventail de sujets liés aux bilans financiers qui se trouvent sur « [questions_valides.md](questions_valides.md) » , tels que :
 * Définition et composants d'un bilan financier
 * Approche patrimoniale du bilan
 * Structure et détails des actifs et passifs du bilan
