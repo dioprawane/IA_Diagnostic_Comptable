@@ -99,7 +99,7 @@ questions.md » , tels que :
 * Bilans fonctionnels et financiers
 * Tableaux de flux de trésorerie et leur interprétation
 
-4. Processus de Fine-Tuning
+3. Processus de Fine-Tuning
     * Formatage des données : Les données sont formatées en fichiers JSONL pour un
 téléchargement et un traitement sans faille par l'API OpenAI.
    * Intégration API : En utilisant l'API OpenAI, les fichiers de formation et de validation sont
@@ -107,7 +107,7 @@ téléchargés, et un travail de fine-tuning est créé.
    * Suivi du travail : Le statut du travail de fine-tuning est continuellement surveillé pour
 assurer son achèvement réussi
 
-5. Inférence et Validation
+4. Inférence et Validation
     * Reconnaissance des questions : Le modèle peut reconnaître et répondre à un ensemble
 de questions prédéfinies et valides liées aux bilans financiers.
     * Messages système : Le processus d'inférence inclut des messages système spécifiques
@@ -115,7 +115,28 @@ pour définir le contexte, garantissant que le modèle répond en tant qu'expert
     * Test en temps réel : Les réponses du modèle sont testées en temps réel avec des
 questions valides et invalides pour démontrer ses capacités et ses limitations.
 
-6. Réponses détaillées
+5. Réponses détaillées
+
+Le modèle fine-tuné fournit des réponses complètes et précises aux questions liées aux bilans
+financiers, garantissant aux utilisateurs de recevoir des informations précieuses et éclairantes.
+Instructions d'utilisation
+
+#### Mise en place
+1. Charger la clé API : Assurez-vous que la clé API OpenAI est définie dans les variables
+d'environnement.
+2. Préparer les données : Formatez vos données d'entraînement, de validation et de test en
+fichiers JSONL.
+3. Télécharger les données : Téléchargez les fichiers de données sur OpenAI en utilisant les
+fonctions API fournies.
+#### Fine-Tuning
+1. Créer le travail de fine-tuning : Initiez un travail de fine-tuning en utilisant les données
+d'entraînement et de validation téléchargées.
+2. Surveiller le travail : Vérifiez continuellement le statut du travail de fine-tuning jusqu'à son
+achèvement.
+#### Effectuer des inférences
+1. Questions valides : Utilisez la liste des questions valides pour interroger le modèle.
+2. Fonction d'inférence : Appelez la fonction d'inférence avec votre question pour obtenir
+des réponses détaillées du modèle fine-tuné.
 
 ## Licence
 
