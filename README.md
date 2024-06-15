@@ -86,7 +86,7 @@ se généralise bien aux nouvelles données non vues.
     * Données de test : Des données de test séparées sont utilisées pour tester les
 performances et la précision du modèle final.
 
-2. Préparation de l'ensemble de données
+2. Couverture étendue des concepts financiers
 
 Le modèle fine-tuné est conçu pour comprendre et fournir des explications détaillées sur un
 large éventail de sujets liés aux bilans financiers qui se trouvent sur « la liste des
@@ -99,7 +99,7 @@ questions.md » , tels que :
     * Bilans fonctionnels et financiers
     * Tableaux de flux de trésorerie et leur interprétation
 
-3. Processus de Fine-Tuning
+4. Processus de Fine-Tuning
     * Formatage des données : Les données sont formatées en fichiers JSONL pour un
 téléchargement et un traitement sans faille par l'API OpenAI.
    * Intégration API : En utilisant l'API OpenAI, les fichiers de formation et de validation sont
@@ -107,7 +107,7 @@ téléchargés, et un travail de fine-tuning est créé.
    * Suivi du travail : Le statut du travail de fine-tuning est continuellement surveillé pour
 assurer son achèvement réussi
 
-4. Inférence et Validation
+5. Inférence et Validation
     * Reconnaissance des questions : Le modèle peut reconnaître et répondre à un ensemble
 de questions prédéfinies et valides liées aux bilans financiers.
     * Messages système : Le processus d'inférence inclut des messages système spécifiques
@@ -115,7 +115,7 @@ pour définir le contexte, garantissant que le modèle répond en tant qu'expert
     * Test en temps réel : Les réponses du modèle sont testées en temps réel avec des
 questions valides et invalides pour démontrer ses capacités et ses limitations.
 
-5. Réponses détaillées
+6. Réponses détaillées
 
 ## Licence
 
