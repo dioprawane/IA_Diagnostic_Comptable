@@ -65,6 +65,58 @@ Ce projet est une application web de diagnostic comptable utilisant l'API OpenAI
 - `app.py` : Le fichier principal de l'application Flask.
 - `requirements.txt` : Liste des dépendances Python nécessaires.
 
+## Fine-Tuning d'un Modèle Financier avec l'API OpenAI
+
+Cette partie se concentre sur le fine-tuning d'un modèle à l'aide de l'API OpenAI pour mieux
+comprendre et répondre aux questions liées à l’équilibre financier. Voici un aperçu détaillé des
+fonctionnalités et caractéristiques du modèle fine-tuné. Ce model a pu être réalisé grâce à la
+documentation d’open ai sur le fine-tuning et à travers le contenu de ce lien également « https://
+cookbook.openai.com/examples/how_to_finetune_chat_models#check-job-status »
+
+### Fonctionnalités et Capacités
+
+1. Préparation de l'ensemble de données
+    * Données d'entraînement : Un ensemble de données diversifié couvrant divers aspects
+des bilans financiers et issu principalement du cours de M Anigo sur l’équilibre financier, a
+été préparé pour l'entraînement. Cela inclut des définitions, des explications de concepts
+et des descriptions détaillées des composants du bilan.
+    * Données de validation : Un ensemble de données de validation est utilisé pour évaluer les
+performances du modèle pendant le processus de fine-tuning, garantissant que le modèle
+se généralise bien aux nouvelles données non vues.
+    * Données de test : Des données de test séparées sont utilisées pour tester les
+performances et la précision du modèle final.
+
+2. Préparation de l'ensemble de données
+
+Le modèle fine-tuné est conçu pour comprendre et fournir des explications détaillées sur un
+large éventail de sujets liés aux bilans financiers qui se trouvent sur « la liste des
+questions.md » , tels que :
+    * Définition et composants d'un bilan financier
+    * Approche patrimoniale du bilan
+    * Structure et détails des actifs et passifs du bilan
+    * Systèmes de présentation des bilans
+    * Annexes et leurs composants
+    * Bilans fonctionnels et financiers
+    * Tableaux de flux de trésorerie et leur interprétation
+
+3. Processus de Fine-Tuning
+    * Formatage des données : Les données sont formatées en fichiers JSONL pour un
+téléchargement et un traitement sans faille par l'API OpenAI.
+   * Intégration API : En utilisant l'API OpenAI, les fichiers de formation et de validation sont
+téléchargés, et un travail de fine-tuning est créé.
+   * Suivi du travail : Le statut du travail de fine-tuning est continuellement surveillé pour
+assurer son achèvement réussi
+
+4. Inférence et Validation
+    * Reconnaissance des questions : Le modèle peut reconnaître et répondre à un ensemble
+de questions prédéfinies et valides liées aux bilans financiers.
+    * Messages système : Le processus d'inférence inclut des messages système spécifiques
+pour définir le contexte, garantissant que le modèle répond en tant qu'expert financier.
+    * Test en temps réel : Les réponses du modèle sont testées en temps réel avec des
+questions valides et invalides pour démontrer ses capacités et ses limitations.
+
+5. Réponses détaillées
+
 ## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
