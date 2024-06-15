@@ -77,7 +77,8 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## Auteurs
 
-- **Diop Rawane** - *Développeur principal* - [dioprawane](https://github.com/dioprawane)
+- **DIOP Serigne Rawane** - *Développeur principal* - [dioprawane](https://github.com/dioprawane)
+- **BORREANI Théo** - *Développeur principal* - [sanseviera](https://github.com/sanseviera)
 
 ---
 
