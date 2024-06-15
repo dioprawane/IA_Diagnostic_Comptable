@@ -91,13 +91,13 @@ performances et la précision du modèle final.
 Le modèle fine-tuné est conçu pour comprendre et fournir des explications détaillées sur un
 large éventail de sujets liés aux bilans financiers qui se trouvent sur « la liste des
 questions.md » , tels que :
-    * Définition et composants d'un bilan financier
-    * Approche patrimoniale du bilan
-    * Structure et détails des actifs et passifs du bilan
-    * Systèmes de présentation des bilans
-    * Annexes et leurs composants
-    * Bilans fonctionnels et financiers
-    * Tableaux de flux de trésorerie et leur interprétation
+* Définition et composants d'un bilan financier
+* Approche patrimoniale du bilan
+* Structure et détails des actifs et passifs du bilan
+* Systèmes de présentation des bilans
+* Annexes et leurs composants
+* Bilans fonctionnels et financiers
+* Tableaux de flux de trésorerie et leur interprétation
 
 4. Processus de Fine-Tuning
     * Formatage des données : Les données sont formatées en fichiers JSONL pour un
