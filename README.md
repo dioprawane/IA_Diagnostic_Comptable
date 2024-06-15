@@ -1,12 +1,12 @@
 # Diagnostic Comptable IA
 
-Ce projet est une application web de diagnostic comptable utilisant l'API OpenAI pour détecter les anomalies dans les écritures comptables et analyser les états financiers. L'application est développée avec Flask et permet d'entrer les données soit par saisie directe, soit en téléchargeant des fichiers de différents formats (CSV, Excel, JSON).
+Ce projet est une application web de diagnostic comptable utilisant l'API OpenAI pour détecter les anomalies dans les écritures comptables et analyser les états financiers. L'application est développée avec Flask et permet d'entrer les données soit par saisie directe, soit en téléchargeant des fichiers de différents formats (CSV, JSON).
 
 ## Fonctionnalités
 
 - Analyse des écritures comptables pour détecter les anomalies.
 - Analyse des états financiers pour fournir une analyse détaillée.
-- Support de l'entrée des données via texte ou téléchargement de fichier (CSV, Excel, JSON).
+- Support de l'entrée des données via texte ou téléchargement de fichier (CSV, JSON).
 - Expertise comptable sur des questions précises.
 
 ## Prérequis
@@ -64,14 +64,16 @@ Ce projet est une application web de diagnostic comptable utilisant l'API OpenAI
 
 - `app.py` : Le fichier principal de l'application Flask.
 - `requirements.txt` : Liste des dépendances Python nécessaires.
+- `des exemples de test`: Des exemples d'écritures comptables, de bilan et de compte de résultat sont disponibles dans ce repository pour tester.
 
 ## Fine-Tuning d'un Modèle Financier avec l'API OpenAI
 
 Cette partie se concentre sur le fine-tuning d'un modèle à l'aide de l'API OpenAI pour mieux
 comprendre et répondre aux questions liées à l’équilibre financier. Voici un aperçu détaillé des
 fonctionnalités et caractéristiques du modèle fine-tuné. Ce model a pu être réalisé grâce à la
-documentation d’open ai sur le fine-tuning et à travers le contenu de ce lien également « https://
-cookbook.openai.com/examples/how_to_finetune_chat_models#check-job-status »
+documentation d’open ai sur le fine-tuning et à travers le contenu de ce lien également [https://cookbook.openai.com/examples/how_to_finetune_chat_models#check-job-status](https://cookbook.openai.com/examples/how_to_finetune_chat_models#check-job-status).     
+Le traitement de notre modèle a duré plus de 30 minutes environs, si jamais vous souhaiteriez refaire le modèle.
+
 
 ### Fonctionnalités et Capacités
 
